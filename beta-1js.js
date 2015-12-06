@@ -34,28 +34,28 @@ function DisplayFunc() {
 	var yga =egain(lv);
 	var zga =egain(lv+1);
 
-	document.getElementById("vrank").value = lv-1;
-	document.getElementById("xrank").value = lv;
-	document.getElementById("yrank").value = lv+1;
-	document.getElementById("zrank").value = lv+2;
+	document.getElementById("vrank").value = " Lv. "+ (lv-1);
+	document.getElementById("xrank").value = " Lv. "+ lv;
+	document.getElementById("yrank").value = " Lv. "+ (lv+1);
+	document.getElementById("zrank").value = " Lv. "+ (lv+2);
 
-	document.getElementById("veat").value = totallist[lv-2];
-	document.getElementById("xeat").value = totallist[lv-1];
-	document.getElementById("yeat").value = totallist[lv];
-	document.getElementById("zeat").value = totallist[lv+1];
+	document.getElementById("veat").value =  " "+totallist[lv-2]+" exp";
+	document.getElementById("xeat").value =  " "+totallist[lv-1]+" exp";
+	document.getElementById("yeat").value =  " "+totallist[lv]+" exp";
+	document.getElementById("zeat").value =  " "+totallist[lv+1]+" exp";
 
 
-	document.getElementById("vexp").value = vga;
+	document.getElementById("vexp").value = " "+vga+" exp";
 	document.getElementById("vcp").value = vga-totallist[lv-2];
 
-	document.getElementById("xexp").value = xga;
+	document.getElementById("xexp").value = " "+ xga+" exp";
 	document.getElementById("xcp").value = xga-totallist[lv-1];
 
 
-	document.getElementById("yexp").value = yga;
+	document.getElementById("yexp").value = " "+ yga+" exp";
 	document.getElementById("ycp").value = yga-totallist[lv];
 
-	document.getElementById("zexp").value = zga;
+	document.getElementById("zexp").value = " "+ zga+" exp";
 	document.getElementById("zcp").value = zga-totallist[lv+1];
 
 
