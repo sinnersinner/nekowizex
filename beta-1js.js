@@ -46,17 +46,17 @@ function DisplayFunc() {
 
 
 	document.getElementById("vexp").value = vga;
-	document.getElementById("vcp").value = vga-totallist[lv-2]-sb;
+	document.getElementById("vcp").value = vga-totallist[lv-2];
 
 	document.getElementById("xexp").value = xga;
-	document.getElementById("xcp").value = xga-totallist[lv-1]-sb;
+	document.getElementById("xcp").value = xga-totallist[lv-1];
 
 
 	document.getElementById("yexp").value = yga;
-	document.getElementById("ycp").value = yga-totallist[lv]-sb;
+	document.getElementById("ycp").value = yga-totallist[lv];
 
 	document.getElementById("zexp").value = zga;
-	document.getElementById("zcp").value = zga-totallist[lv+1]-sb;
+	document.getElementById("zcp").value = zga-totallist[lv+1];
 
 
 }
