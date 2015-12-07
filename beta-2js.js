@@ -91,7 +91,7 @@ function DisplayFunc() {
 	}
 	else{
 
-		document.getElementById("state").value = "正常運轉中";
+		document.getElementById("state").value = "似乎正常運轉中";
 		document.getElementById("state").style.color = "blue";
 
 		document.getElementById("zeat").value =  " "+totallist[lv+1]+" exp";
@@ -99,6 +99,10 @@ function DisplayFunc() {
 		document.getElementById("zexp").value = " "+ zga+" exp";
 		document.getElementById("zcp").value = zga-totallist[lv+1];
 	
+	}
+	if(lv<=2){
+		document.getElementById("state").value = "出了點問題，建議確認輸入數值";
+		document.getElementById("state").style.color = "red";
 	}
 
 }
