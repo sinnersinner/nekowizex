@@ -1,146 +1,110 @@
-<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>黑貓維茲 - 卡片養成計算</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="黑貓維茲卡片養成計算、堆肥！">
-<meta name="author" content="SINNERSINNER ">
-<meta name="keywords" content="黑貓維茲，卡片養成，堆肥，肥料" >
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-<link rel="stylesheet" href="css/index.css">
-
 </head>
 
 
-<body class='container-fluid'>
+<body>
+<h2 align=center><font color="#CFCFCF"><del>肥料</del></font> 卡片養成計算☆　測試版</h2>
 
 
-<div class='col-md-4 title'>
-<h2><del>肥料</del>卡片養成計算☆ 測試版2.0</h2>
-</div>
 
 
-<section class='tips col-md-12'>
-<div class='col-md-6'>
-  <p>
-    素材卡養成可直接參照： <a href="https://www.ptt.cc/bbs/MysticWiz/M.1448727072.A.1FB.html" target="_blank">PTT 《MysticWiz》 -  素材卡作肥料經驗表</a><br />
-    詳細說明請參照： <a href="https://www.ptt.cc/bbs/MysticWiz/M.1427615020.A.DFF.html" target="_blank">PTT 《MysticWiz》 - 廢卡堆肥教學、堆肥概念說明</a><br />
-    建議使用PTT閱讀  #1L5wqit_ (MysticWiz)
-  </p>
-  <p>
-    簡易說明：以<a href='http://i.imgur.com/aKMULpq.jpg' target='_blank' class='example_link'>《圖》</a>為例，請先將要作肥料的卡片餵給其他<b><span class='mark'>同色</span></b>卡得到他等級1提供的經驗值<br />
-    例圖為<span class='mark'> Rank S</span> 龍，獲得經驗值為<span class='mark'>1029</span>，則請將Rank設為 <span class='mark'>S </span>經驗值輸入<span class='mark'>1029</span>。<br />
-    接著參考add值，餵食經驗值把他養大。可獲得經驗值就是吃掉這張卡會得到的經驗值<br />
-  </p>
+<script type="text/javascript" src="beta-2js.js">
+</script>
 
-  
-Rank <select id="a" name="a">
-  <option value="C">C</option>
-  <option value="C+">C+</option>
-  <option value="B">B</option>
-  <option value="B+">B+</option>
-  <option value="A">A</option>
-  <option value ="A+">A+</option>
-  <option value="S">S</option>
-  <option value="S+">S+</option>
-  <option value="SS">SS</option>
-</select>
-<br />
-卡片等級1提供的經驗值：
+<br>
+
+素材卡養成可直接參照： <a href="https://www.ptt.cc/bbs/MysticWiz/M.1448727072.A.1FB.html" target="_blank">PTT 《MysticWiz》 -  素材卡作肥料經驗表</a><br>
+詳細說明請參照： <a href="https://www.ptt.cc/bbs/MysticWiz/M.1427615020.A.DFF.html" target="_blank">PTT 《MysticWiz》 - 廢卡堆肥教學、堆肥概念說明</a><br>
+　　　　　　　　建議使用PTT閱讀  #1L5wqit_ (MysticWiz)
+<br>
+簡易說明：以<a href=" http://i.imgur.com/aKMULpq.jpg" target="_blank">此圖</a>為例，請先將要作肥料的卡片餵給其他<b><font color="#F00000">同色</font></b>卡得到他等級1提供的經驗值<br>
+　　　　　例圖為<font color="#F00000"> Rank S</font> 龍，獲得經驗值為<font color="#F00000">1029</font>，則請將Rank設為 <font color="#F00000">S </font>經驗值輸入<font color="#F00000">1029</font>。<br>
+　　　　　接著參考add值，餵食經驗值把他養大。可獲得經驗值就是吃掉這張卡會得到的經驗值
+<br>
+<br>
+Rank
+<select id="a" name="a"><option value="C">C</option><option value="C+">C+</option><option value="B">B</option><option value="B+">B+</option><option value="A">A</option><option value ="A+">A+</option><option value="S">S</option><option value="S+">S+</option><option value="SS">SS</option></select>
+
+，卡片等級1提供的經驗值：
 <input onkeyup="value=value.replace(/[^\d]/g,'') " 
 　　 onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
-　　 ID="b" NAME="b" /><b><span class='mark'>請用餵給同色卡的經驗值</span></b>
+　　 ID="b" NAME="b"><b><font color="#F00000">　請用餵給同色卡的經驗值</font></b>
 
 
 
 
-<p><input class="btn btn-primary" onclick="DisplayFunc()" type="button" value="計算" /></p>
+<p><input onclick="DisplayFunc()" type="button" value="計算" /></p>
 
-</div>
 
-<div class='col-md-6 example-img'>
-  <img src='http://imgur.com/IZ8H7DZ.jpg' class='col-md-12' />
-</div>
 
-<hr class='col-md-12'>
 
-<br />
+<hr color=#CFCFCF>
 
-<div class='col-md-12'>
-餵食<input id="veat" type="text" name="veat" readonly="readonly" size="10" value="" />
+<br>
+
+　餵食<input id="veat" type="text" name="veat" readonly="readonly" size="10" value="" />
 ,成長為<input id="vrank" type="text" name="vrank" readonly="readonly" size="10" value="" />
 ,可獲得經驗值<input id="vexp" type="text" name="vexp" readonly="readonly" size="10" value="" />
-,Add值<input id="vcp" type="text" name="vcp" readonly="readonly" size="10" value="" />
-</div>
+,Add值<input id="vcp" type="text" name="vcp" readonly="readonly" size="10" value="" /></p>
 
-<div class='col-md-12'>
-餵食<input id="xeat" type="text" name="xeat" readonly="readonly" size="10" value="" />
+
+　餵食<input id="xeat" type="text" name="xeat" readonly="readonly" size="10" value="" />
 ,成長為<input id="xrank" type="text" name="xrank" readonly="readonly" size="10" value="" />
 ,可獲得經驗值<input id="xexp" type="text" name="xexp" readonly="readonly" size="10" value="" />
-,Add值<input id="xcp" type="text" name="xcp" readonly="readonly" size="10" value="" />
-</div>
+,Add值<input id="xcp" type="text" name="xcp" readonly="readonly" size="10" value="" /></p>
 
-<div class='col-md-12 top-chose'>
-餵食<input id="yeat" type="text" name="yeat" readonly="readonly" size="10" value="" />
+
+
+◎餵食<input id="yeat" type="text" name="yeat" readonly="readonly" size="10" value="" />
 ,成長為<input id="yrank" type="text" name="yrank" readonly="readonly" size="10" value="" />
 ,可獲得經驗值<input id="yexp" type="text" name="yexp" readonly="readonly" size="10" value="" />
-,Add值<input id="ycp" type="text" name="ycp" readonly="readonly" size="10" value="" />　<span class='label label-success'>預定最佳等級</span> <span class='label label-info'><b>(參考用)</b></span>
-</div>
+,Add值<input id="ycp" type="text" name="ycp" readonly="readonly" size="10" value="" />　<span style="background-color: #FFFF00;">預定最佳等級</span><span style="color: #F00000;">  <b>(參考用)</b></span></p>
 
-<div class='col-md-12'>
-餵食<input id="zeat" type="text" name="zeat" readonly="readonly" size="10" value="" />
+
+
+　餵食<input id="zeat" type="text" name="zeat" readonly="readonly" size="10" value="" />
 ,成長為<input id="zrank" type="text" name="zrank" readonly="readonly" size="10" value="" />
 ,可獲得經驗值<input id="zexp" type="text" name="zexp" readonly="readonly" size="10" value="" />
-,Add值<input id="zcp" type="text" name="zcp" readonly="readonly" size="10" value="" />
-</div>
+,Add值<input id="zcp" type="text" name="zcp" readonly="readonly" size="10" value="" /></p>
 
-<div class='col-md-12'>
-狀態<input id="state" type="text" name="state" readonly="readonly" size="30" style="color:black" value=""  />
-</div>
+　※<input id="state" type="text" name="state" readonly="readonly" size="25" style="color:black" value=""  />
 
-<div class='col-md-12'>
-注意：<br />
-<p class='notice text-info'>
-<span class="label label-danger">可獲得經驗值</span>及<span class="label label-danger">Add值</span>皆是理想情況下的推論值，和實際值可能存在誤差，並且是餵給同色卡的數值<br />
+<br>
+<br>
+　注意：<br>
 
-<span class="label label-danger">Add值</span>概念基本上就是CP值，是總獲得-總付出的推論值<br />
+　　　　<font color="#F00000">"可獲得經驗值"</font>及<font color="#F00000">"Add值"</font>皆是理想情況下的推論值，和實際值可能存在誤差，並且是餵給<font color="#F00000">同色</font>卡的數值
+<br>
+　　　　<font color="#F00000">"Add值"</font>概念基本上就是CP值，是總獲得-總付出的推論值
+<br>
+　　　　因為程式寫得簡單的緣故，有可能<span style="background-color: #FFFF00;">預定最佳等級</span>的<font color="#F00000">"Add值"</font>並不是最高的<br>
 
-因為程式寫得簡單的緣故，有可能預定<span class='label label-success'>最佳等級</span>的<span class="label label-danger">Add值</span>並不是最高的<br />
+　　　　另外實際上餵食經驗值很難剛好，多餵的經驗值是直接浪費掉<br>
 
-另外實際上餵食經驗值很難剛好，多餵的經驗值是直接浪費掉<br />
+　　　　也有餵到最佳等級但比上一級多拿到的經驗值才多 1，像是C+卡，LV.1提供經驗38的情況<br>
 
-也有餵到<span class='label label-success'>最佳等級</span>但比上一級多拿到的經驗值才多 1，像是C+卡，LV.1提供經驗38的情況<br />
+　　　　所以<span style="background-color: #FFFF00;">預定最佳等級</span>只是<span style="color: #F00000;"><b>參考用</b></span>，請視情況選擇Add值最高或次高或次次高的
 
-所以預定<span class='label label-success'>最佳等級</span>只是<span clas='mark'><b>參考用</b></span>，請視情況選擇<span class="label label-danger">Add值</span>最高或次高或次次高的<br />
-</p>
-</div>
-<hr class='col-md-12'>
+<br>
+<br>
 
-<div class='col-md-6'>
-[15/12/08 -  版面更新]<br />
-。謝謝crossdunk提供版面。整個變高級了於是變成2.0\(ﾟ∀ﾟ)/ 
+<hr color=#8C8C8C>
 
-
-</div>
-
-</section>
-
-<hr>
-<p class="text-danger">
 
 有BUG、問題，聯絡請至 telnet://ptt.cc ID:SINNERSINNER <br>
 或是：sinfors14@gmail.com 
-</p>
 
+<br>
+<br>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />本網頁程式碼係採用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">創用 CC 姓名標示-非商業性 4.0 國際 授權條款</a>授權.
-<br>
-<br>
-<br>
+
+
+
+
+
+
 
 </body>
-<script type="text/javascript" src="beta-2js.js"></script>
 </html>
