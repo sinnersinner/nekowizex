@@ -20,7 +20,7 @@ function DisplayFunc() {
 
 	arank = document.getElementById("a").value;	 
 	sb = document.getElementById("b").value;	//選擇
-	nb=(Math.round(sb/1.25));	//異色
+	nb=(Math.floor(sb/1.25));	//異色
 	mb =Math.ceil(sb*aM[arank]) ;
 	maxlv = aLv[arank];
 
