@@ -17,20 +17,18 @@
   }
   @media only screen and (min-width: 1024px) {
     .example-img{
+	width:500px;
+
       display:block;
     }
     .example_link:before{
-    content:'右';
+
     }
   }
   del{
     color:#A2A2A2;
   }
-  select{
-    border-radius: 5px;
-    height:30px;
-    width:50px;
-  }
+
   .title{
     float:none;
     margin:auto;
@@ -53,6 +51,9 @@
     height:1px;
     border:none;
     border-top:3px double #555555;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom:10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
   }
