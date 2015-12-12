@@ -4,7 +4,7 @@
 <title>黑貓維茲 - 卡片養成計算</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="黑貓維茲卡片養成計算、堆肥！">
-<meta name="author" content="INNERSINNER ">
+<meta name="author" content="SINNERSINNER ">
 <meta name="keywords" content="黑貓維茲，卡片養成，堆肥，肥料" >
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -27,13 +27,15 @@
 <section class='tips col-md-12'>
 <div class='col-md-6'>
   <p>
+
+
     素材卡養成可直接參照： <a href="https://www.ptt.cc/bbs/MysticWiz/M.1448727072.A.1FB.html" target="_blank">PTT 《MysticWiz》 -  素材卡作肥料經驗表</a><br />
-    詳細說明請參照： <a href="https://www.ptt.cc/bbs/MysticWiz/M.1427615020.A.DFF.html" target="_blank">PTT 《MysticWiz》 - 廢卡堆肥教學、堆肥概念說明</a><br />
-    建議使用PTT閱讀  #1L5wqit_ (MysticWiz)
   </p>
+<a href="#" onClick="window.open('readme.html','test','width=540,height=500,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=800,top=20');return false">使用說明</a><br/>
   <p>
-    簡易說明：以<a href='http://i.imgur.com/aKMULpq.jpg' target='_blank' class='example_link'>《圖》</a>為例，請先將要作肥料的卡片餵給其他<b><span class='mark'>同色</span></b>卡得到他等級1提供的經驗值<br />
-    例圖為<span class='mark'> Rank S</span> 龍，獲得經驗值為<span class='mark'>1029</span>，則請將Rank設為 <span class='mark'>S </span>經驗值輸入<span class='mark'>1029</span>。<br />
+    簡易說明：以<a href='http://i.imgur.com/aKMULpq.jpg' target='_blank' class='example_link'>《圖》</a>為例，請先將要作肥料的卡片餵給其他<b><span class='mark'>同色</span></b>卡得到他的經驗值<br />
+   例圖為 Lv.1 <span class='mark'> Rank S</span> 龍，將他餵給同色卡獲得經驗值為<span class='mark'>1029</span><br />
+則請將Rank設為 <span class='mark'>S </span>經驗值輸入<span class='mark'>1029</span>，選擇<span class='mark'>同色</span><br />
     接著參考add值，餵食經驗值把他養大。可獲得經驗值就是吃掉這張卡會得到的經驗值<br />
   </p>
 
@@ -49,20 +51,27 @@ Rank <select id="a" name="a">
   <option value="S+">S+</option>
   <option value="SS">SS</option>
 </select>
-<br />
-卡片等級1提供的經驗值：
+
+卡片等級<input onkeyup="value=value.replace(/[^\d]/g,'') " 
+　　 onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+　　 ID="c" NAME="c" size="2" value="1" >的經驗值：
 <input onkeyup="value=value.replace(/[^\d]/g,'') " 
 　　 onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
-　　 ID="b" NAME="b" /> <input type="radio" name="non"  checked="">同色
-<input type="radio" name="non" id="non1" >異色
+　　 ID="b" NAME="b" size="18" >　<input type="radio" name="non"  checked="">同色
+	<input type="radio" name="non" id="non1" >異色 
 
 
 
 
-<p><input class="btn btn-primary" onclick="DisplayFunc()" type="button" value="計算" /></p>
+<p>　<select id="calc" name="calc"><option value="0">模式：堆肥計算</option><option value="1">模式：Lv？提供經驗試算（請參照說明）</option></select>
+　　
+<input class="btn btn-primary" onclick="DisplayFunc()" type="button" value="計算" />
+
+
+
+</p>
 
 </div>
-
 <div class='col-md-6 example-img'>
   <img src='http://imgur.com/IZ8H7DZ.jpg' class='col-md-12' />
 </div>
@@ -72,35 +81,39 @@ Rank <select id="a" name="a">
 <br />
 
 <div class='col-md-12'>
+
+
+<br/>
+
 餵食<input id="veat" type="text" name="veat" readonly="readonly" size="10" value="" />
-,成長為<input id="vrank" type="text" name="vrank" readonly="readonly" size="10" value="" />
-,可獲得經驗值<input id="vexp" type="text" name="vexp" readonly="readonly" size="10" value="" />
+,成長為<input id="vrank" type="text" name="vrank" readonly="readonly" size="8" value="" />
+,可獲得經驗值<input id="vexp" type="text" name="vexp" readonly="readonly" size="12" value="" />
 ,Add值<input id="vcp" type="text" name="vcp" readonly="readonly" size="10" value="" />
 </div>
 
 <div class='col-md-12'>
 餵食<input id="xeat" type="text" name="xeat" readonly="readonly" size="10" value="" />
-,成長為<input id="xrank" type="text" name="xrank" readonly="readonly" size="10" value="" />
-,可獲得經驗值<input id="xexp" type="text" name="xexp" readonly="readonly" size="10" value="" />
+,成長為<input id="xrank" type="text" name="xrank" readonly="readonly" size="8" value="" />
+,可獲得經驗值<input id="xexp" type="text" name="xexp" readonly="readonly" size="12" value="" />
 ,Add值<input id="xcp" type="text" name="xcp" readonly="readonly" size="10" value="" />
 </div>
 
 <div class='col-md-12 top-chose'>
 餵食<input id="yeat" type="text" name="yeat" readonly="readonly" size="10" value="" />
-,成長為<input id="yrank" type="text" name="yrank" readonly="readonly" size="10" value="" />
-,可獲得經驗值<input id="yexp" type="text" name="yexp" readonly="readonly" size="10" value="" />
+,成長為<input id="yrank" type="text" name="yrank" readonly="readonly" size="8" value="" />
+,可獲得經驗值<input id="yexp" type="text" name="yexp" readonly="readonly" size="12" value="" />
 ,Add值<input id="ycp" type="text" name="ycp" readonly="readonly" size="10" value="" />　<span class='label label-success'>預定最佳等級</span> <span class='label label-info'><b>(參考用)</b></span>
 </div>
 
 <div class='col-md-12'>
 餵食<input id="zeat" type="text" name="zeat" readonly="readonly" size="10" value="" />
-,成長為<input id="zrank" type="text" name="zrank" readonly="readonly" size="10" value="" />
-,可獲得經驗值<input id="zexp" type="text" name="zexp" readonly="readonly" size="10" value="" />
+,成長為<input id="zrank" type="text" name="zrank" readonly="readonly" size="8" value="" />
+,可獲得經驗值<input id="zexp" type="text" name="zexp" readonly="readonly" size="12" value="" />
 ,Add值<input id="zcp" type="text" name="zcp" readonly="readonly" size="10" value="" />
 </div>
 
 <div class='col-md-12'>
-狀態<input id="state" type="text" name="state" readonly="readonly" size="30" style="color:black" value=""  />
+狀態<input id="state" type="text" name="state" readonly="readonly" size="70" style="color:black" value=""  />
 </div>
 
 <div class='col-md-12'>
@@ -120,13 +133,17 @@ Rank <select id="a" name="a">
 </p>
 </div>
 <hr class='col-md-12'>
+
 <div class="col-md-6">
+
+[15/12/12 - 新增模式]<br>
+。使用前請詳閱<a href="#" onClick="window.open('readme.html','test','width=540,height=500,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=800,top=20');return false">使用說明</a><br/>
+
 [15/12/08 -  版面更新]<br>
 。謝謝crossdunk提供版面。整個變高級了於是變成2.0\(ﾟ∀ﾟ)/ 
 
 
 </div>
-
 </section>
 
 
@@ -141,5 +158,5 @@ Rank <select id="a" name="a">
 <br>
 
 </body>
-<script type="text/javascript" src="beta-3js.js"></script>
+<script type="text/javascript" src="beta-25.js"></script>
 </html>
