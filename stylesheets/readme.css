@@ -1,0 +1,59 @@
+
+  body{
+    font-family: '微軟正黑體';
+    line-height: 30px;
+    font-size: 16px;
+  }
+  @media only screen and (max-width: 640px) {
+    body{
+      font-size: 16px;
+    }
+    .title h2{
+
+      font-size: 16px;
+      color:#A800A8;
+
+    }
+  }
+  .example-img{
+      display:none;
+  }
+  @media only screen and (min-width: 1024px) {
+    .example-img{
+	width:500px;
+
+      display:block;
+    }
+    .example_link:before{
+
+    }
+  }
+  del{
+    color:#A2A2A2;
+  }
+
+  .title{
+    float:auto;
+    margin:auto;
+  }
+  .tips p{
+    color:#4B4B4B;
+    font-weight: 900;
+  }
+  .mark{
+    color:#FF5757;
+  }
+  .notice{
+    margin-left: 20px;
+  }
+  .top-chose{
+    color:#34B803;
+    font-weight: 900;
+  }
+  hr{
+    height:1px;
+    border:none;
+    border-top:3px double #555555;
+
+
+  }
