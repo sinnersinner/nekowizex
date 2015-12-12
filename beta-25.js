@@ -15,7 +15,7 @@ bn=0;
 maxLv=0;
 bsetmode=0;
 calcmode=0;
-
+sth=0;
 
 // 回傳
 function DisplayFunc() {
@@ -23,13 +23,14 @@ function DisplayFunc() {
 	arank = document.getElementById("a").value;	 
 	bs = document.getElementById("b").value;	//選擇
 	cs = document.getElementById("c").value;
-	csforcalc = document.getElementById("c").value;
+
 	calcmode = document.getElementById("calc").value; 
+	csforcalc = document.getElementById("c").value;
 	maxlv = aLv[arank];
 	var needexp = aM[arank];
 	ncolor=0;
 
-	
+//分支1 start	
 	if(calcmode == 1){
 
 		lv= (csforcalc-1);
@@ -43,12 +44,12 @@ function DisplayFunc() {
 	}
 
 	else{
-	if(cs == 1)
-		normalmode();
+		if(cs == 1)
+			normalmode();
 			
-	else
+		else{
 		if(cs > maxlv)
-		{
+		
 			inputerror();
 			document.getElementById("state").value = " 等級輸入超過該卡上限，請重新輸入";
 			return;
@@ -59,27 +60,28 @@ function DisplayFunc() {
 	var lv =fact(bm);
 	
 	}
-	
+
 	if(lv <2 ){
 	
 		inputerror();
-		document.getElementById("state").value = " 推薦最佳等級小於2，請重新輸入";
+		document.getElementById("state").value = " 出了點問題，建議確認輸入數值";
 
 	}
 	else{
-
 
 	var vga =egain(lv-2);
 	var xga =egain(lv-1);
 	var yga =egain(lv);
 	var zga =egain(lv+1);
-	if ( cs==1 ){
+//分支1 end 
+
+	if ( cs==1 ){ //normalmode
 	document.getElementById("veat").value =  " "+totallist[lv-2]+" exp";
 	document.getElementById("xeat").value =  " "+totallist[lv-1]+" exp";
 	document.getElementById("yeat").value =  " "+totallist[lv]+" exp";
 
 	}
-	else{
+	else{ //setlv mode
 	document.getElementById("veat").value =  " "+(totallist[lv-2] - totallist[cs-1])+" exp";
 	document.getElementById("xeat").value =  " "+(totallist[lv-1] - totallist[cs-1])+" exp";
 	document.getElementById("yeat").value =  " "+(totallist[lv] - totallist[cs-1])+" exp";
