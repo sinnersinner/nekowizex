@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -5,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="黑貓維茲卡片養成計算、堆肥！">
 <meta name="author" content="SINNERSINNER ">
-<meta name="keywords" content="黑貓維茲，卡片養成，堆肥，肥料，經驗值" >
+<meta name="keywords" content="黑貓維茲，卡片養成，堆肥，肥料，經驗值計算" >
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -79,6 +80,7 @@ Rank <select id="a" name="a">
 ,成長為<input id="vrank" type="text" name="vrank" readonly="readonly" size="8" value="" />
 ,可獲得經驗值<input id="vexp" type="text" name="vexp" readonly="readonly" size="12" value="" />
 ,Add值<input id="vcp" type="text" name="vcp" readonly="readonly" size="10" value="" />
+,成本倍率<input id="vcostm" type="text" name="vcp" readonly="readonly" size="10" value="" />
 </div>
 
 <div class='col-md-12'>
@@ -86,13 +88,15 @@ Rank <select id="a" name="a">
 ,成長為<input id="xrank" type="text" name="xrank" readonly="readonly" size="8" value="" />
 ,可獲得經驗值<input id="xexp" type="text" name="xexp" readonly="readonly" size="12" value="" />
 ,Add值<input id="xcp" type="text" name="xcp" readonly="readonly" size="10" value="" />
+,成本倍率<input id="xcostm" type="text" name="vcp" readonly="readonly" size="10" value="" />
 </div>
 
 <div class='col-md-12 top-chose'>
 餵食<input id="yeat" type="text" name="yeat" readonly="readonly" size="10" value="" />
 ,成長為<input id="yrank" type="text" name="yrank" readonly="readonly" size="8" value="" />
 ,可獲得經驗值<input id="yexp" type="text" name="yexp" readonly="readonly" size="12" value="" />
-,Add值<input id="ycp" type="text" name="ycp" readonly="readonly" size="10" value="" />　<span class='label label-success'>預定最佳等級</span> <span class='label label-info'><b>(參考用)</b></span>
+,Add值<input id="ycp" type="text" name="ycp" readonly="readonly" size="10" value="" />
+,成本倍率<input id="ycostm" type="text" name="vcp" readonly="readonly" size="10" value="" />　<span class='label label-success'>預定最佳等級</span> <span class='label label-info'><b>(參考用)</b></span>
 </div>
 
 <div class='col-md-12'>
@@ -100,6 +104,7 @@ Rank <select id="a" name="a">
 ,成長為<input id="zrank" type="text" name="zrank" readonly="readonly" size="8" value="" />
 ,可獲得經驗值<input id="zexp" type="text" name="zexp" readonly="readonly" size="12" value="" />
 ,Add值<input id="zcp" type="text" name="zcp" readonly="readonly" size="10" value="" />
+,成本倍率<input id="zcostm" type="text" name="vcp" readonly="readonly" size="10" value="" />
 </div>
 
 <div class='col-md-12'>
@@ -124,9 +129,13 @@ Rank <select id="a" name="a">
 </div>
 <hr class='col-md-12'>
 <div class="col-md-6">
+[16/04/11 - 增加成本倍率]<br>
+。V4.1 - 成本倍率=(總獲得經驗)/(Lv.1經驗+付出經驗)，詳見<a href="#" onClick="window.open('readme.html','test','width=540,height=500,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=800,top=20');return false">使用說明</a><br/>
+
 [16/02/10 - 修改倍率]<br>
 。V4.0 - 倍率改採用<a href="https://www.ptt.cc/bbs/MysticWiz/M.1452834155.A.9DA.html" target="_blank">PTT 《MysticWiz》 -  [心得] 經驗值倍率之我見</a> by Isatis<br>
 　以及其他bug修正<br> 
+
 [16/01/14 - 新增Rank L]<br>
 。V3.0 - 賀！Ｌ開放！<br>
 　感謝phinix快速計算L的倍率！(`・ω・´)ゞ<br>
@@ -134,6 +143,8 @@ Rank <select id="a" name="a">
 。使用前請詳閱<a href="#" onClick="window.open('readme.html','test','width=540,height=500,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=800,top=20');return false">使用說明</a><br/>
 [15/12/08 -  版面更新]<br>
 。謝謝crossdunk提供版面。整個變高級了於是變成2.0\(ﾟ∀ﾟ)/ 
+
+
 
 </div>
 </section>
@@ -150,5 +161,5 @@ Rank <select id="a" name="a">
 <br>
 
 </body>
-<script type="text/javascript" src="beta-4.js"></script>
+<script type="text/javascript" src="beta-4.1.js"></script>
 </html>
