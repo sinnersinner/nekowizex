@@ -182,11 +182,13 @@ function normalmode(){
 		ncolor = 1;
 		bn=(Math.round(bs));
 		bm (bs*1.25*aM[arank]) ;
+		lv1=Math.ceil(bs*1.25);
 	}
 	else{
 		
 		bn=(Math.floor(bs/1.25));	//轉為初始值lv
 		bm =(bs*aM[arank]) ;
+		lv1=Math.ceil(bs);
 	}
 
 
@@ -197,7 +199,7 @@ function setlvmode(){
 		bn =Math.floor(bs/(((cs-1)*aM[arank])+1));
 		bm =(bn*1.25*aM[arank]) ;		
 		bsetmode= bn;
-		lv1= bsetmode;
+		lv1=Math.ceil(bn*1.25);
 
 	}
 	else{
@@ -205,7 +207,7 @@ function setlvmode(){
 		bn=Math.floor(bs/1.25/ (((cs-1)*aM[arank])+1));	//異色
 		bm =(bn*1.25*aM[arank]) ;	
 		bsetmode=Math.ceil(bn*1.25);
-		lv1= bsetmode;
+		lv1=Math.ceil(bn*1.25);
 		
 	}
 
