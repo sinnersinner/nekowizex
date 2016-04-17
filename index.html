@@ -21,7 +21,7 @@
 
 
 <div class='col-md-4 title'>
-<h2><del>肥料</del>卡片養成計算☆測試v4.0</h2>
+<h2><del>肥料</del>卡片養成計算☆測試v4.2</h2>
 </div>
 
 
@@ -57,10 +57,7 @@ Rank <select id="a" name="a">
 　　 ID="c" NAME="c" size="2" value="1" >提供的經驗值：
 <input onkeyup="value=value.replace(/[^\d]/g,'') " 
 　　 onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
-　　 ID="b" NAME="b" size="18" >　<input type="radio" name="non"  checked="">同色
-	<input type="radio" name="non" id="non1" >異色 
-
-
+　　 ID="b" NAME="b" size="18" >
 
 　<select id="calc" name="calc"><option value="0">模式：堆肥計算 (預設)</option><option value="1">模式：Lv？提供經驗試算（請參照說明）</option></select>　　
 <p><input class="btn btn-primary" onclick="DisplayFunc()" type="button" value="計算" /></p>
@@ -129,6 +126,9 @@ Rank <select id="a" name="a">
 </div>
 <hr class='col-md-12'>
 <div class="col-md-6">
+[16/04/18 - 暫時移除異色選項]<br>
+。v4.2 - 發現bug先移除異色選項<br/>
+
 [16/04/11 - 增加成本倍率]<br>
 。V4.1 - 成本倍率=(總獲得經驗)/(Lv.1經驗+付出經驗)，詳見<a href="#" onClick="window.open('readme.html','test','width=540,height=500,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=800,top=20');return false">使用說明</a><br/>
 
@@ -161,5 +161,5 @@ Rank <select id="a" name="a">
 <br>
 
 </body>
-<script type="text/javascript" src="beta-4.1.js"></script>
+<script type="text/javascript" src="beta-4.2.js"></script>
 </html>
