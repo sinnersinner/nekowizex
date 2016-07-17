@@ -49,6 +49,7 @@ Rank <select id="a" name="a">
   <option value="S">S</option>
   <option value="S+">S+</option>
   <option value="SS">SS</option>
+  <option value="SS+">SS+</option>
   <option value="L">L</option>
 </select>
 
@@ -126,12 +127,23 @@ Rank <select id="a" name="a">
 </div>
 <hr class='col-md-12'>
 <div class="col-md-6">
+[16/07/17 - 新增SS+]<br>
+。感謝senior提供數據!<br/>
+
 [16/04/18 - 暫時移除異色選項]<br>
-。v4.2 - 發現bug先移除異色選項<br/>
+。發現bug先移除<br/>
 
 [16/04/11 - 增加成本倍率]<br>
 。V4.1 - 成本倍率=(總獲得經驗)/(Lv.1經驗+付出經驗)，詳見<a href="#" onClick="window.open('readme.html','test','width=540,height=500,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=800,top=20');return false">使用說明</a><br/>
 
+
+
+<p><a style="text-decoration: none" href="javascript:extend('block1')">
+<img height=9 src="plus.gif" width=9 border=0>
+過去更新點我</a></p>
+
+<div id=block1 style="display: none">
+<div class="col-md-6">
 [16/02/10 - 修改倍率]<br>
 。V4.0 - 倍率改採用<a href="https://www.ptt.cc/bbs/MysticWiz/M.1452834155.A.9DA.html" target="_blank">PTT 《MysticWiz》 -  [心得] 經驗值倍率之我見</a> by Isatis<br>
 　以及其他bug修正<br> 
@@ -143,8 +155,6 @@ Rank <select id="a" name="a">
 。使用前請詳閱<a href="#" onClick="window.open('readme.html','test','width=540,height=500,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=800,top=20');return false">使用說明</a><br/>
 [15/12/08 -  版面更新]<br>
 。謝謝crossdunk提供版面。整個變高級了於是變成2.0\(ﾟ∀ﾟ)/ 
-
-
 
 </div>
 </section>
@@ -159,7 +169,16 @@ Rank <select id="a" name="a">
 <br>
 <br>
 <br>
-
+<script language=javascript>
+function extend(hider)
+{
+HideMenu = document.all[hider].style;
+if (HideMenu.display == 'none')
+HideMenu.display = "block";
+else
+HideMenu.display = "none";
+}
+</script>
 </body>
-<script type="text/javascript" src="beta-4.2.js"></script>
+<script type="text/javascript" src="beta-4_2.js"></script>
 </html>
